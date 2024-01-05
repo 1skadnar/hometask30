@@ -15,13 +15,19 @@ class Mypage3 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Image(image: AssetImage('assets/images/img_2.png')),
+            Image.asset(
+              'assets/images/img_2.png',
+              width: 421,
+              height: 430,
+
+            ),
+            const SizedBox(height: 50),
             const Text('Contactless Delivery', style: TextStyle(fontSize: 25)),
             const Center(child: Text('Amet minim mollit non deserunt ullamco est')),
             const Center(child: Text('sit aliqua dolor do amet sint. Velit officia')),
             const Center(child: Text('consequat duis enim velit mollit. Exercitation')),
             const Center(child: Text('veniam conseqat sunt nostrud amet.')),
-            const SizedBox(height: 10),
+            const SizedBox(height: 200),
 
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -42,7 +48,7 @@ class Mypage3 extends StatelessWidget {
                   height: 80,
 
                 ),
-                const SizedBox(width: 10),
+                const SizedBox(width: 120),
                 ElevatedButton(onPressed: (){
                   Navigator.push(
                     context,

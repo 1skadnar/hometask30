@@ -12,7 +12,7 @@ class _HomePageState extends State<HomePage> {
   SingleChildScrollView(
     // Sahifalar ro'yxati
     child: Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -47,6 +47,153 @@ class _HomePageState extends State<HomePage> {
               ),
             ],
           ),
+          Image.asset(
+            'assets/images/img_6.png',
+          ),
+          const Text('Product Name',style: TextStyle(fontSize: 25),),
+          const Text('\$''25.00',style: TextStyle(fontSize: 15),),
+          const SizedBox(height: 25,),
+          const Text('Lörem ipsum sorad Madeleine Engström. Du kan vara drabbad.Krofask nystartsjobb det vill säga vinde.',style: TextStyle(fontSize: 15),),
+          const SizedBox(height: 40,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Expanded(
+                child: TextButton(
+                  onPressed: () {
+                  },
+                  child: const Text('Deals'),
+                ),
+              ),
+              const SizedBox(width: 10),
+              TextButton(
+                onPressed: () {
+                },
+                child: const Text('See all'),
+              ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const SizedBox(width: 15,),
+              Column(
+                children: [
+                  Image.asset(
+                    'assets/images/img_7.png',
+                    width: 200,
+                    height: 200,
+                  ),
+                  const Text('Product Name'),
+                  const Text('\$''25.00'),
+                ],
+              ),
+              const SizedBox(width: 60,),
+              Column(
+                children: [
+                  Image.asset(
+                    'assets/images/img_7.png',
+                    width: 200,
+                    height: 200,
+                  ),
+                  const Text('Product Name'),
+                  const Text('\$''25.00'),
+                ],
+              ),
+            ],
+          ),
+          const SizedBox(height: 50),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const SizedBox(width: 15,),
+              Column(
+                children: [
+                  Image.asset(
+                    'assets/images/img_7.png',
+                    width: 200,
+                    height: 200,
+                  ),
+                  const Text('Product Name'),
+                  const Text('\$''25.00'),
+                ],
+              ),
+              const SizedBox(width: 60,),
+              Column(
+                children: [
+                  Image.asset(
+                    'assets/images/img_7.png',
+                    width: 200,
+                    height: 200,
+                  ),
+                  const Text('Product Name'),
+                  const Text('\$''25.00'),
+                ],
+              ),
+            ],
+          ),
+          const SizedBox(height: 80),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Expanded(
+                child: TextButton(
+                  onPressed: () {
+                  },
+                  child: const Text('Categories'),
+                ),
+              ),
+              const SizedBox(width: 10),
+              TextButton(
+                onPressed: () {
+                },
+                child: const Text('See all'),
+              ),
+            ],
+          ),
+          Row(
+            children: [
+              const SizedBox(width: 60,),
+              Card(
+                elevation: 3,
+                child: Container(
+                  width: 100,
+                  height: 100,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: Colors.white,
+                  ),
+                  child : const Center(child: Text('Tech')) ,
+                ),
+              ),
+              const SizedBox(width: 60,),
+              Card(
+                elevation: 3,
+                child: Container(
+                  width: 100,
+                  height: 100,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: Colors.white,
+                  ),
+                  child : const Center(child: Text('Fashion')) ,
+                ),
+              ),
+              const SizedBox(width: 60,),
+              Card(
+                elevation: 3,
+                child: Container(
+                  width: 100,
+                  height: 100,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: Colors.white,
+                  ),
+                  child : const Center(child: Text('Gaming')) ,
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     ),
@@ -63,7 +210,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Text('Welcome'),
       ),
-      body: _pages[_selectedIndex], // Tanlangan sahifa
+      body: _pages[_selectedIndex],
       bottomNavigationBar: GNav(
         backgroundColor: Colors.black,
         color: Colors.white,
