@@ -10,7 +10,6 @@ class _HomePageState extends State<HomePage> {
 
   final List<Widget> _pages = [
   SingleChildScrollView(
-    // Sahifalar ro'yxati
     child: Padding(
       padding: const EdgeInsets.all(0),
       child: Column(
