@@ -238,11 +238,27 @@ class _HomePageState extends State<HomePage1> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Welcome'),
+        title: const Text(
+            'Welcome'
+        ),
           actions: [
             TextButton(
-              onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage()),);},
-              child: const Text("Next", style: TextStyle(color: Colors.red),),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (
+                          context
+                          ) => const HomePage()
+                  ),
+                );
+                },
+              child: const Text(
+                "Next",
+                style: TextStyle(
+                    color: Colors.red
+                ),
+              ),
             ),
           ]
       ),
@@ -253,7 +269,10 @@ class _HomePageState extends State<HomePage1> {
         activeColor: Colors.white,
         tabBackgroundColor: Colors.grey,
         gap: 20,
-        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+        padding: const EdgeInsets.symmetric(
+            horizontal: 15,
+            vertical: 20
+        ),
         tabs: const [
           GButton(
             icon: Icons.home,

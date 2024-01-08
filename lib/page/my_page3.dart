@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:untitled1/page/my_page2.dart';
 import 'package:untitled1/page/my_page4.dart';
-import 'package:untitled1/page/my_page6.dart';
 class Mypage3 extends StatelessWidget {
   const Mypage3({Key? key}) : super(key: key);
   @override
@@ -20,11 +19,32 @@ class Mypage3 extends StatelessWidget {
               height: 430,
             ),
             const SizedBox(height: 50),
-            const Text('Contactless Delivery', style: TextStyle(fontSize: 25)),
-            const Center(child: Text('Amet minim mollit non deserunt ullamco est')),
-            const Center(child: Text('sit aliqua dolor do amet sint. Velit officia')),
-            const Center(child: Text('consequat duis enim velit mollit. Exercitation')),
-            const Center(child: Text('veniam conseqat sunt nostrud amet.')),
+            const Text(
+                'Contactless Delivery',
+                style: TextStyle(
+                    fontSize: 25
+                )
+            ),
+            const Center(
+                child: Text(
+                    'Amet minim mollit non deserunt ullamco est'
+                )
+            ),
+            const Center(
+                child: Text(
+                    'sit aliqua dolor do amet sint. Velit officia'
+                )
+            ),
+            const Center(
+                child: Text(
+                    'consequat duis enim velit mollit. Exercitation'
+                )
+            ),
+            const Center(
+                child: Text(
+                    'veniam conseqat sunt nostrud amet.'
+                )
+            ),
             const SizedBox(height: 200),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -33,10 +53,20 @@ class Mypage3 extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const Mypage2()),
+                      MaterialPageRoute(
+                          builder:
+                              (context)
+                          => const Mypage2(),
+                      ),
                     );
                   },
-                  child: const Text('Prev',style: TextStyle(fontSize: 25,color: Colors.red),), // Adjusted button label
+                  child: const Text(
+                    'Prev',
+                    style: TextStyle(
+                        fontSize: 25,
+                        color: Colors.red
+                    ),
+                  ), // Adjusted button label
                 ),
                 const SizedBox(width: 120),
                 Image.asset(
@@ -45,11 +75,16 @@ class Mypage3 extends StatelessWidget {
                   height: 80,
 
                 ),
-                const SizedBox(width: 120),
+                const SizedBox(
+                    width: 120
+                ),
                 ElevatedButton(onPressed: (){
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const HomePage1()),
+                    MaterialPageRoute(builder: (
+                        context
+                        ) => const HomePage1()
+                    ),
                   );
                 }, child: const Text('Start',style: TextStyle(fontSize: 25,color: Colors.red),),)
               ],
