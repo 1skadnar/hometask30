@@ -19,13 +19,39 @@ class Mypage2 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Image(image: AssetImage('assets/images/img_1.png')),
-            const Text('Fastest Delivery', style: TextStyle(fontSize: 25)),
-            const Center(child: Text('Amet minim mollit non deserunt ullamco est')),
-            const Center(child: Text('sit aliqua dolor do amet sint. Velit officia')),
-            const Center(child: Text('consequat duis enim velit mollit. Exercitation')),
-            const Center(child: Text('veniam conseqat sunt nostrud amet.')),
-            const SizedBox(height: 100),
+            const Image(
+              image: AssetImage(
+                'assets/images/img_1.png'
+            ),
+            ),
+            const Text(
+                'Fastest Delivery',
+                style: TextStyle(
+                    fontSize: 25
+                ),),
+            const Center(
+                child: Text(
+                    'Amet minim mollit non deserunt ullamco est'
+                ),
+            ),
+            const Center(
+                child: Text(
+                    'sit aliqua dolor do amet sint. Velit officia'
+                )
+            ),
+            const Center(
+                child: Text(
+                    'consequat duis enim velit mollit. Exercitation'
+                )
+            ),
+            const Center(
+                child: Text(
+                    'veniam conseqat sunt nostrud amet.'
+                )
+            ),
+            const SizedBox(
+                height: 100
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

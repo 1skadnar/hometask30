@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:untitled1/page/my_page5.dart';
 import 'package:untitled1/page/my_page6.dart';
 class HomePage1 extends StatefulWidget {
   const HomePage1({Key? key}) : super(key: key);
@@ -25,12 +24,16 @@ class _HomePageState extends State<HomePage1> {
               hintText: 'Search',
             ),
           ),
-          const SizedBox(height: 15),
+          const SizedBox(
+              height: 15
+          ),
           const Text(
             'Hello Jane',
             style: TextStyle(fontSize: 25),
           ),
-          const Text('we have some recommendations for you'),
+          const Text(
+              'we have some recommendations for you'
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -53,11 +56,30 @@ class _HomePageState extends State<HomePage1> {
           Image.asset(
             'assets/images/img_6.png',
           ),
-          const Text('Product Name',style: TextStyle(fontSize: 25),),
-          const Text('\$''25.00',style: TextStyle(fontSize: 15)),
-          const SizedBox(height: 25,),
-          const Text('Lörem ipsum sorad Madeleine Engström. Du kan vara drabbad.Krofask nystartsjobb det vill säga vinde.',style: TextStyle(fontSize: 15),),
-          const SizedBox(height: 40),
+          const Text(
+            'Product Name',
+            style: TextStyle(
+                fontSize: 25
+            ),
+          ),
+          const Text(
+              '\$''25.00',
+              style: TextStyle(
+                  fontSize: 15
+              ),
+          ),
+          const SizedBox(
+            height: 25
+          ),
+          const Text(
+            'Lörem ipsum sorad Madeleine Engström. Du kan vara drabbad.Krofask nystartsjobb det vill säga vinde.',
+            style: TextStyle(
+                fontSize: 15
+            ),
+          ),
+          const SizedBox(
+              height: 40
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -105,7 +127,9 @@ class _HomePageState extends State<HomePage1> {
               ),
             ],
           ),
-          const SizedBox(height: 50),
+          const SizedBox(
+              height: 50
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -135,7 +159,9 @@ class _HomePageState extends State<HomePage1> {
               ),
             ],
           ),
-          const SizedBox(height: 80),
+          const SizedBox(
+              height: 80
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

@@ -202,7 +202,7 @@ class _Page8State extends State<Page8> {
               SizedBox(width: 60),
               Text('Cart Total:',style: TextStyle(fontSize: 25),),
               SizedBox(width: 250),
-              Text('all Price',style: TextStyle(fontSize: 25),),
+              Text('\$ 75',style: TextStyle(fontSize: 25),),
             ],
           ),
           const SizedBox(height: 50),
