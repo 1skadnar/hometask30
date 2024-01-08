@@ -1,72 +1,78 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:untitled1/page/my_page4.dart';
 import 'package:untitled1/page/my_page5.dart';
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  const HomePage({Key? key}) : super(key: key);
+
   @override
-  State<HomePage> createState() => _HomePageState();
+  _HomePageState createState() => _HomePageState();
 }
+
 class _HomePageState extends State<HomePage> {
-  PageController controller = PageController(viewportFraction: 0.85);
+  late PageController controller;
   int currentPageIndex = 0;
-  void changeBottomNavigation(int index){
-    currentPageIndex =  index;
+
+  @override
+  void initState() {
+    super.initState();
+    controller = PageController(viewportFraction: 0.85);
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
+
+  void changeBottomNavigation(int index) {
+    currentPageIndex = index;
     setState(() {});
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage1()),);},
-          icon: const Icon(Icons.arrow_back)
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(Icons.arrow_back),
         ),
-            actions: [
-              TextButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => const Page8()),);},
-                            child: const Text("Next", style: TextStyle(color: Colors.red),),
-    )
-        ],
       ),
-        body: Column(
+      body: SingleChildScrollView(
+        child: Column(
           children: [
-            const SizedBox(
-                height: 50
-            ),
+            const SizedBox(height: 10),
             SizedBox(
               height: 200,
               child: PageView(
-                // pageSnapping: false,
-                onPageChanged: changeBottomNavigation,
+                controller: controller,
+                onPageChanged: (index) {
+                  changeBottomNavigation(index);
+                },
                 physics: const BouncingScrollPhysics(),
                 children: const [
+                  // Your Images for PageView
                   Image(
-                      image: AssetImage(
-                          'assets/images/img.png'
-                      ),
-                      width: 200,
-                      height: 100
+                    image: AssetImage('assets/images/img_6.png'),
+                    width: 200,
+                    height: 100,
                   ),
                   Image(
-                      image: AssetImage(
-                          'assets/images/img.png'
-                      ),
-                      width: 200,
-                      height: 100
+                    image: AssetImage('assets/images/img_6.png'),
+                    width: 200,
+                    height: 100,
                   ),
                   Image(
-                      image: AssetImage(
-                          'assets/images/img.png'
-                      ),
-                      width: 200,
-                      height: 100
+                    image: AssetImage('assets/images/img_6.png'),
+                    width: 200,
+                    height: 100,
                   ),
                 ],
               ),
             ),
-            const SizedBox(
-                height: 15
-            ),
+            const SizedBox(height: 5),
             SmoothPageIndicator(
                 controller: controller,
                 count:  3,
@@ -84,7 +90,7 @@ class _HomePageState extends State<HomePage> {
                 }
             ),
             const SizedBox(
-                height: 50
+                height: 0
             ),
             const Row(
               children: [
@@ -124,7 +130,16 @@ class _HomePageState extends State<HomePage> {
                 'Madeleine Engström. Du kan vara drabbad.'
             ),
             ElevatedButton(
-              onPressed: (){},
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(
+                      builder: (context) => const Page8()),);
+              },
+              style:ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(0)
+                ),
+              ),
               child: const Text('+          Add to Card            ',
                 style: TextStyle(
                     fontSize: 25
@@ -147,10 +162,170 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
-            Container()
+            const Row(
+              children: [
+                SizedBox(width: 30),
+                CircleAvatar(
+                  radius: 40,
+                  backgroundImage: NetworkImage(
+                      'https://via.placeholder.com/150'),
+                  child: Icon(Icons.person),
+                ),
+                SizedBox(width: 15 ,),
+                Row(
+                  children: [
+                    Column(
+                      children: [
+                        Text("Jane Cooper ", style: TextStyle(fontSize: 25),),
+                        Row(
+                          children: [
+                            Icon(Icons.star),
+                            Icon(Icons.star),
+                            Icon(Icons.star),
+                            Icon(Icons.star),
+                            Icon(Icons.star),
 
+                          ],
+                        )
+                      ],
+                    )
+                  ],
+                ),
+                SizedBox(width: 91  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("01 / 01 / 2021")
+                  ],
+                ),
+              ],
+            ),
+            const Column(
+              children: [
+                Text('Amazing Product',style: TextStyle(fontSize: 25),),
+                Text('Lörem ipsum sorad Madeleine Engström. Du kan vara',),
+                Text('drabbad. Krofask nystartsjobb det vill säga vinde.  Lörem '),
+                Text('ipsum sorad Madeleine Engström. Du kan vara drabbad.')
+              ],
+            ),
+            const SizedBox(height: 15),
+            const Row(
+              children: [
+                SizedBox(width: 30),
+                CircleAvatar(
+                  radius: 40,
+                  backgroundImage: NetworkImage(
+                      'https://via.placeholder.com/150'),
+                  child: Icon(Icons.person),
+                ),
+                SizedBox(width: 15 ,),
+                Row(
+                  children: [
+                    Column(
+                      children: [
+                        Text("Lance Alot ", style: TextStyle(fontSize: 25),),
+                        Row(
+                          children: [
+                            Icon(Icons.star),
+                            Icon(Icons.star),
+                            Icon(Icons.star),
+                            Icon(Icons.star),
+                            Icon(Icons.star),
+
+                          ],
+                        )
+                      ],
+                    )
+                  ],
+                ),
+                SizedBox(width: 91  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("01 / 01 / 2021")
+                  ],
+                ),
+              ],
+            ),
+            const Column(
+              children: [
+                Text('Amazing Product',style: TextStyle(fontSize: 25),),
+                Text('Lörem ipsum sorad Madeleine Engström. Du kan vara',),
+                Text('drabbad. Krofask nystartsjobb det vill säga vinde.  Lörem '),
+                Text('ipsum sorad Madeleine Engström. Du kan vara drabbad.')
+              ],
+            ),
+            const SizedBox(height: 15),
+            const Row(
+              children: [
+                SizedBox(width: 30),
+                CircleAvatar(
+                  radius: 40,
+                  backgroundImage: NetworkImage(
+                      'https://via.placeholder.com/150'),
+                  child: Icon(Icons.person),
+                ),
+                SizedBox(width: 15 ,),
+                Row(
+                  children: [
+                    Column(
+                      children: [
+                        Text("Lance Alot ", style: TextStyle(fontSize: 25),),
+                        Row(
+                          children: [
+                            Icon(Icons.star),
+                            Icon(Icons.star),
+                            Icon(Icons.star),
+                            Icon(Icons.star),
+                            Icon(Icons.star),
+
+                          ],
+                        )
+                      ],
+                    )
+                  ],
+                ),
+                SizedBox(width: 91 ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("01 / 01 / 2021")
+                  ],
+                ),
+              ],
+            ),
+            const SizedBox(height: 15),
+            const Column(
+              children: [
+                Text('Amazing Product',style: TextStyle(fontSize: 25),),
+                Text('Lörem ipsum sorad Madeleine Engström. Du kan vara',),
+                Text('drabbad. Krofask nystartsjobb det vill säga vinde.  Lörem '),
+                Text('ipsum sorad Madeleine Engström. Du kan vara drabbad.'),
+              ],
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(
+                      builder: (context) => const Page8()),);
+              },
+              style:ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(0)
+                ),
+              ),
+              child: const Text('           See more reviews            ',
+                style: TextStyle(
+                    fontSize: 25
+                ),
+              ),
+            ),
+            const SizedBox(height: 15 ),
+            const Text(''),
           ],
-        )
+        ),
+      ),
     );
   }
 }

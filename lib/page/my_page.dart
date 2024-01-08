@@ -39,7 +39,7 @@ class MyPage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const SizedBox(width: 190),
+                const SizedBox(width: 210),
                 Image.asset(
                   'assets/images/img_3.png',
                   width: 80,

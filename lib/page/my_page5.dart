@@ -220,8 +220,25 @@ class _Page8State extends State<Page8> {
                 ],
               )
             ],
-          )
-
+          ),
+          const SizedBox(height: 50,),
+          ElevatedButton(
+            onPressed: (){
+              Navigator.push(context,
+                MaterialPageRoute(
+                    builder: (context) => const Page8()),);
+            },
+            style:ElevatedButton.styleFrom(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(0)
+              ),
+            ),
+            child: const Text('             Check out               ',
+              style: TextStyle(
+                  fontSize: 25
+              ),
+            ),
+          ),
         ],
       ),
     );
