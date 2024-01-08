@@ -40,6 +40,12 @@ class _Page8State extends State<Page8> {
           'My Card',
           style: TextStyle(fontSize: 30),
         ),
+        actions: [
+          TextButton(
+            onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => const Page8()),);},
+            child: const Text("Next", style: TextStyle(color: Colors.red),),
+          ),
+        ],
       ),
       body: Column(
         children: [

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:untitled1/page/my_page5.dart';
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+import 'package:untitled1/page/my_page6.dart';
+class HomePage1 extends StatefulWidget {
+  const HomePage1({Key? key}) : super(key: key);
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<HomePage1> createState() => _HomePageState();
 }
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<HomePage1> {
 
   int _selectedIndex = 0;
 
@@ -213,8 +214,8 @@ class _HomePageState extends State<HomePage> {
         title: const Text('Welcome'),
           actions: [
             TextButton(
-              onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => const Page8()),);},
-              child: const Text("Skip", style: TextStyle(color: Colors.red),),
+              onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage()),);},
+              child: const Text("Next", style: TextStyle(color: Colors.red),),
             ),
           ]
       ),

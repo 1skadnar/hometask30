@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:untitled1/page/my_page2.dart';
 import 'package:untitled1/page/my_page4.dart';
+import 'package:untitled1/page/my_page6.dart';
 class Mypage3 extends StatelessWidget {
   const Mypage3({Key? key}) : super(key: key);
   @override
@@ -48,7 +49,7 @@ class Mypage3 extends StatelessWidget {
                 ElevatedButton(onPressed: (){
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const HomePage()),
+                    MaterialPageRoute(builder: (context) => const HomePage1()),
                   );
                 }, child: const Text('Start',style: TextStyle(fontSize: 25,color: Colors.red),),)
               ],

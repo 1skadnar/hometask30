@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:untitled1/page/my_page4.dart';
+import 'package:untitled1/page/my_page5.dart';
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
   @override
@@ -15,6 +17,17 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage1()),);},
+          icon: const Icon(Icons.arrow_back)
+        ),
+            actions: [
+              TextButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => const Page8()),);},
+                            child: const Text("Next", style: TextStyle(color: Colors.red),),
+    )
+        ],
+      ),
         body: Column(
           children: [
             const SizedBox(
