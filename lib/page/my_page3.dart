@@ -6,9 +6,7 @@ class Mypage3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       appBar: AppBar(
-
       ),
       body: Center(
         child: Column(
@@ -19,7 +17,6 @@ class Mypage3 extends StatelessWidget {
               'assets/images/img_2.png',
               width: 421,
               height: 430,
-
             ),
             const SizedBox(height: 50),
             const Text('Contactless Delivery', style: TextStyle(fontSize: 25)),
@@ -28,7 +25,6 @@ class Mypage3 extends StatelessWidget {
             const Center(child: Text('consequat duis enim velit mollit. Exercitation')),
             const Center(child: Text('veniam conseqat sunt nostrud amet.')),
             const SizedBox(height: 200),
-
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

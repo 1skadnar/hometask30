@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:untitled1/page/my_page5.dart';
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
   @override
   State<HomePage> createState() => _HomePageState();
 }
 class _HomePageState extends State<HomePage> {
+
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [
@@ -41,6 +43,7 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(width: 10),
               TextButton(
                 onPressed: () {
+
                 },
                 child: const Text('See all'),
               ),
@@ -50,10 +53,10 @@ class _HomePageState extends State<HomePage> {
             'assets/images/img_6.png',
           ),
           const Text('Product Name',style: TextStyle(fontSize: 25),),
-          const Text('\$''25.00',style: TextStyle(fontSize: 15),),
+          const Text('\$''25.00',style: TextStyle(fontSize: 15)),
           const SizedBox(height: 25,),
           const Text('Lörem ipsum sorad Madeleine Engström. Du kan vara drabbad.Krofask nystartsjobb det vill säga vinde.',style: TextStyle(fontSize: 15),),
-          const SizedBox(height: 40,),
+          const SizedBox(height: 40),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -105,7 +108,7 @@ class _HomePageState extends State<HomePage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(width: 15,),
+              const SizedBox(width: 15),
               Column(
                 children: [
                   Image.asset(
@@ -114,10 +117,10 @@ class _HomePageState extends State<HomePage> {
                     height: 200,
                   ),
                   const Text('Product Name'),
-                  const Text('\$''25.00'),
+                  const Text('\$ 25.00'),
                 ],
               ),
-              const SizedBox(width: 60,),
+              const SizedBox(width: 60),
               Column(
                 children: [
                   Image.asset(
@@ -126,7 +129,7 @@ class _HomePageState extends State<HomePage> {
                     height: 200,
                   ),
                   const Text('Product Name'),
-                  const Text('\$''25.00'),
+                  const Text('\$25.00'),
                 ],
               ),
             ],
@@ -208,6 +211,12 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Welcome'),
+          actions: [
+            TextButton(
+              onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => const Page8()),);},
+              child: const Text("Skip", style: TextStyle(color: Colors.red),),
+            ),
+          ]
       ),
       body: _pages[_selectedIndex],
       bottomNavigationBar: GNav(
